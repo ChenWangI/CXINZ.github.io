@@ -147,6 +147,44 @@ TH {
 
            <hr width="900"> <!-- 白线一条900像素 --> 
           </tr>
+
+
+
+
+
+
+
+
+          <!-- 本地时间显示容器 -->
+<div style="text-align: center; font-size: 30px; color: #333;" id="localTime"></div>
+
+<script>
+// 格式化并更新本地时间
+function updateLocalTime() {
+  const now = new Date();
+  // 格式：年-月-日 时:分:秒（补零对齐）
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // 月份0-11，需+1
+  const day = String(now.getDate()).padStart(2, '0');
+  const hour = String(now.getHours()).padStart(2, '0');
+  const minute = String(now.getMinutes()).padStart(2, '0');
+  const second = String(now.getSeconds()).padStart(2, '0');
+  
+  const formattedTime = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+  document.getElementById('localTime').innerText = `北京时间：${formattedTime}`;
+}
+
+// 初始加载+每秒更新
+updateLocalTime();
+setInterval(updateLocalTime, 1000);
+</script>
+
+
+
+
+
+
+
       </tbody></table>
       <table width="200" border="0">
         <tbody><tr>
