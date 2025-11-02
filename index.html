@@ -280,13 +280,20 @@ function updateLocalTime() {
   const second = String(now.getSeconds()).padStart(2, '0');
   
   const formattedTime = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
-  document.getElementById('localTime').innerText = `北京时间：${formattedTime}`;
+  document.getElementById('localTime').innerText = `活动时间：${formattedTime}`;
 }
 
 // 初始加载+每秒更新
 updateLocalTime();
 setInterval(updateLocalTime, 1000);
 </script>
+
+
+<!-- 结束时间 全局HDtime -->
+<div style="text-align: right; font-size: 30px; color: #216637;" id="HDtime"></div>
+<script>renderGlobalText("HDtime");</script> 
+
+
 
           <tr>
           <td>　
