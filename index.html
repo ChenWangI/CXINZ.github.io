@@ -322,12 +322,27 @@ setInterval(updateLocalTime, 1000);
           </td>
 
 
+
+          <td style="font-size: 0;"> <!-- 消除inline-block默认间距 -->
+          <!-- 链接容器：行内块+基线对齐 -->
+          <div style="display: inline-block; vertical-align: baseline; font-size: 19px;">
+          <strong><a href=" ">立即参加</a ></strong>
+          </div>
+          <!-- 动态文本容器：与链接同基线 -->
+          <div id="DYhd1" class="DYhdColor" style="display: inline-block; vertical-align: baseline; font-size: 16px; margin-left: 10px;"></div>
+          <script>renderGlobalText("DYhd1");</script> 
+
+
+
+
+<!-- 
             <td><div  style="vertical-align: top;" > 
             <strong><a href="https://pan.baidu.com/s/13q3JARUMLve8TUFHaSJsTA?pwd=8888" style="font-size: 19px;">立即参加</a></strong></div>     <script>renderGlobalText("DYhd1");</script> 
 
             <div  style="vertical-align: top;" id="DYhd1" class="DYhdColor"></div>
             <script>renderGlobalText("DYhd1");</script> 
             </td>
+ -->
 
 
             <td bgcolor="#f8efce"><div class="STYLEC1" align="center"> 全天重金广告/div></td>
