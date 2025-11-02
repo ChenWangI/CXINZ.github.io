@@ -12,23 +12,54 @@
 
 
 
-
-
- <div id="brand"></div>
- <div id="slogan"></div>
-
+<!-- 1. 先引入全局变量脚本（放在<head>，确保所有元素加载前变量已定义） -->
+<head>
 <script>
-     // 声明全局静态变量（window.前缀确保全局可访问）
-     window.GLOBAL_TEXT = {
-       brand: "陳心做 Cxinz.com111",
-       slogan: "新鲜直达，自然本味111",
-       copyright: "© 2025 陳心做果业 保留所有权利"
-     };
-     // 调用变量到HTML元素中
-     document.getElementById("brand").innerText = GLOBAL_TEXT.brand;
-     document.getElementById("slogan").innerText = GLOBAL_TEXT.slogan;
-     document.getElementById("copyright").innerText = GLOBAL_TEXT.copyright;
-   </script>
+ window.GLOBAL_TEXT = {
+
+   
+
+
+
+
+   DPhd1: "    店铺活动 19.8一箱暁蜜瓜       ",
+   DPhd2: "    店铺活动 18.8一箱羊角瓜       ",
+
+
+   DYhd2: "    抖音活动  9.9一箱羊角瓜       ",
+   DYhd2: "    抖音活动  9.9一箱火龙果       ",
+
+
+   MThd1: "    美团活动  0.01一箱暁蜜瓜       ",
+   MThd2: "    美团活动  0.01一箱羊角瓜       ",
+
+
+   ELMhd1: "   饿了么活动  0.01一箱暁蜜瓜       ",
+   ELMhd2: "   饿了么活动  0.01一箱羊角瓜       ",
+
+
+
+
+
+
+
+
+
+ 
+ };
+ // 修复：用addEventListener避免onload覆盖，支持多次调用
+ function renderGlobalText(id) {
+   window.addEventListener('load', function() { // 替换window.onload为addEventListener
+     const elem = document.getElementById(id);
+     if (elem) elem.innerText = window.GLOBAL_TEXT[id];
+   });
+ }
+ </script>
+</head>
+
+
+
+
 
 
 
@@ -259,7 +290,8 @@ setInterval(updateLocalTime, 1000);
           <tr align="middle" bgcolor="#f8efce">
             <td bgcolor="#f8efce">
 
-
+            <div id="DPhd1" class="STYLEC1"></div>
+            <script>renderGlobalText("DPhd1");</script> 
 
           </td>
             <td><div align="center"><strong><a href="https://pan.baidu.com/s/13q3JARUMLve8TUFHaSJsTA?pwd=8888">登陆器下载[网盘]</a></strong></div></td>
