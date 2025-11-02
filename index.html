@@ -13,16 +13,25 @@
 
 
 <body>
- <!-- 承载元素 -->
- <div id="DPhd"></div>
- <div id="DYhd"></div>
 
- <script>
- // 全局变量+循环调用（减少重复代码，执行更快）
- window.GLOBAL_TEXT={DPhd:"DPhd活动1",DYhd:"DY活动1",MThd:"MT活动1",ELMhd:"ELM活动1"};
- Object.keys(GLOBAL_TEXT).forEach(k=>document.getElementById(k).innerText=GLOBAL_TEXT[k]);
- </script>
+
+ <div id="brand"></div>
+ <div id="slogan"></div>
+
+<script>
+     // 声明全局静态变量（window.前缀确保全局可访问）
+     window.GLOBAL_TEXT = {
+       brand: "陳心做 Cxinz.com",
+       slogan: "新鲜直达，自然本味",
+       copyright: "© 2025 陳心做果业 保留所有权利"
+     };
+     // 调用变量到HTML元素中
+     document.getElementById("brand").innerText = GLOBAL_TEXT.brand;
+     document.getElementById("slogan").innerText = GLOBAL_TEXT.slogan;
+     document.getElementById("copyright").innerText = GLOBAL_TEXT.copyright;
+   </script>
  </body>
+
 
 
 
@@ -251,8 +260,6 @@ setInterval(updateLocalTime, 1000);
           <tr align="middle" bgcolor="#f8efce">
             <td bgcolor="#f8efce">
 
- <div id="DPhd"></div>
- <div id="DYhd"></div>
 
 
           </td>
@@ -447,9 +454,6 @@ setInterval(updateLocalTime, 1000);
             Consign China.ChenWangI  </a>
 
 
-
- <div id="DPhd"></div>
- <div id="DYhd"></div>
 
 
 
