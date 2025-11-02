@@ -17,7 +17,7 @@
  window.GLOBAL_TEXT = {
 
    
-
+  HDtime "     结束至-11月17日       ",
 
 
 
@@ -242,7 +242,11 @@ TH {
         <tbody>
 
            <!-- 本地时间显示容器 -->
-<div style="text-align: center; font-size: 30px; color: #216637;" id="localTime"></div>
+  <div style="text-align: center; font-size: 30px; color: #216637;" id="localTime" ></div>
+
+  <div id="HDtime" align="right" class="DPhdColor"></div>
+  <script>renderGlobalText("HDtime");</script> 
+
 
 <script>
 // 格式化并更新本地时间
@@ -257,7 +261,7 @@ function updateLocalTime() {
   const second = String(now.getSeconds()).padStart(2, '0');
   
   const formattedTime = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
-  document.getElementById('localTime').innerText = `北京时间：${formattedTime}`;
+  document.getElementById('localTime').innerText = `活动时间：${formattedTime}`;
 }
 
 // 初始加载+每秒更新
@@ -337,106 +341,7 @@ setInterval(updateLocalTime, 1000);
 
 
 
-
-
-
-
-
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--  隐藏原来三个大表格代码1
-      <hr width="815">
-      <table width="815" border="0" align="center" bordercolor="#84868C" bgcolor="#CCFFCC">
-        <tbody><tr>
-          <td height="94"><p align="center" class="STYLE153">【1.76金币复古游戏介绍】</p>
-            <p align="center" class="STYLE96">         <span class="STYLE163">【Cxinz.陳心做.理念】：不充就玩不下去的，通通都是坑里的服！来这里，不花也能开心玩一年</span></p>
-
-           
-
-            <p class="STYLE96"><br>
-              【版本特色】：<a target="_blank">怀旧176复古(金币版),无暗坑，无副本，无隐藏赞助</a></p>
-            <p class="STYLE96"><a target="_blank"><br>
-              </a>
-              【游戏特色】：<a target="_blank">经典1.76改版升级之作,赤月装备终极,一切来源，全部靠打</a></p>
-            <p class="STYLE96"><br>
-              【装备等级】：<a target="_blank">初级→沃玛→祖玛→赤月→简洁明了，无多余装备，回归质朴</a></p>
-            <p class="STYLE96"><br>
-              【升级稳定】：本服无泡点,无经验卷,一切手动升级,绝无任何内置挂机升级系统 </p>
-            <p class="STYLE96"><br>
-
-              【游戏特色】：免费地图-无暗坑-17级PK经典技能-战法道-从此玛法大陆-拉开序幕</p> 
-            <p class="STYLE96"><br>
-              <br>
-              <span class="STYLE159"> 游戏更多特色，欢迎体验，体验5分钟，绝无后悔，如有瑕疵，全力修复，版本长期</span></p>  
-
-               
-
-
-            </td>
-        </tr>
-      </tbody></table>
-      <hr width="815">
-      <table width="815" border="0" align="center" bgcolor="#CCFFFF">
-        <tbody><tr>
-          <td height="47"><p class="STYLE153">【亮点特色】：</p>
-                <p class="STYLE153"><br>
-                        <span class="STYLE166">
-              1.怀旧复古金币版，无暗坑，无副本，无赞助，无会员</span>
-                </p><p class="STYLE167"><br>
-              2.游戏地图，全部可玩，装备全部，可爆，可担保，可交易
-                </p><p class="STYLE167"><br>
-              3.唯一货币，只有金币，全部可打，合理利用，才是王道                              
-                </p><p class="STYLE167"><br>
-              4.独有17级，经典技能，畅快PK，战法道前期,不再枯燥，从此玛法大陆，再次拉开序幕</p>
-              <p class="STYLE167"><br>
-              5.散人天堂，胜者为王，一切靠爆，赤月终极，金币免费打，不打也可充，只有最强玩家</p></td>
-        </tr>
-      </tbody></table>
-      <hr width="815">
-      <table width="815" border="0" align="center" bordercolor="#84868C" bgcolor="#A5A6AD">
-        <tbody>
-          <tr>
-            <td height="47"><p class="STYLE96"><strong>【合区事项】：</strong></p>
-              <p class="STYLE96"><br>
-                <span class="STYLE165">注意事项:新区合区清理35级以下的小号,请勿把贵重物品放在小号，以免损失！</span></p>
-              <p class="STYLE96"><span class="STYLE165"><br>
-                合区后如果密码错误或进去没人物，多半是有重复的帐号存在.</span></p>
-              <p class="STYLE96"><span class="STYLE165"><br>
-                可以在帐号后面加个a,如重复的号很多就依次循环下区，abcdefg等等。。</span></p>
-              <p class="STYLE96"><span class="STYLE165"><br>
-                如果满位账号变动方法：12345678900 变为 1234567890a 或者 
-                123456789b，即最后一位变动为字母 。 </span></p>
-              <p class="STYLE96">&nbsp;</p></td>
-          </tr>
-       </tbody>
-
-      </table>
-
-
-       隐藏3个板块到这里-->
-
-
 
 
     
