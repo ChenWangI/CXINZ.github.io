@@ -15,22 +15,19 @@
 <!-- 1. 先引入全局变量脚本（放在<head>，确保所有元素加载前变量已定义） -->
 <head>
 <script>
-// 全局变量脚本：单独提取，确保所有页面都能访问
-window.GLOBAL_TEXT = {
-  brand: "陳心做 Cxinz.com99",
-  slogan: "新鲜直达，自然本味",
-  copyright: "© 2025 陳心做果业 保留所有权利"
-};
-
-// 通用调用函数：确保元素渲染后再赋值
-function renderGlobalText(id) {
-  // 等待页面完全加载（关键！解决表格元素未渲染问题）
-  window.onload = function() {
-    const elem = document.getElementById(id);
-    if (elem) elem.innerText = window.GLOBAL_TEXT[id]; // 直接用window.确保全局访问
-  };
-}
-</script>
+ window.GLOBAL_TEXT = {
+   brand: "陳心做 Cxinz.com99",
+   slogan: "新鲜直达，自然本味",
+   copyright: "© 2025 陳心做果业 保留所有权利"
+ };
+ // 修复：用addEventListener避免onload覆盖，支持多次调用
+ function renderGlobalText(id) {
+   window.addEventListener('load', function() { // 替换window.onload为addEventListener
+     const elem = document.getElementById(id);
+     if (elem) elem.innerText = window.GLOBAL_TEXT[id];
+   });
+ }
+ </script>
 </head>
 
 
