@@ -30,7 +30,7 @@
 
 
 
-   DYhd1: "    9.9一箱羊角瓜       ",
+   DYhd1: "    9.9一箱       ",
    DYhd2: "    抖音活动  9.9一箱火龙果       ",
    DYhd3: "    抖音活动  9.9一箱菇娘果       ",
 
@@ -324,12 +324,14 @@ setInterval(updateLocalTime, 1000);
 
 
           <td style="font-size: 0;"> <!-- 消除inline-block默认间距 -->
+            
           <!-- 链接容器：行内块+基线对齐 -->
-          <div style="display: inline-block; vertical-align: baseline; font-size: 19px;">
-          <strong><a href=" ">立即参加</a ></strong>
-          </div>
-          <!-- 动态文本容器：与链接同基线 -->
-          <div id="DYhd1" class="DYhdColor" style="display: inline-block; vertical-align: baseline; font-size: 16px; margin-left: 10px;"></div>
+       <div style="display: inline-block; vertical-align: baseline; font-size: 19px; line-height: 19px;">
+         <strong><a href=" " style="text-decoration: none;">立即参加</a ></strong>
+     </div>
+     <!-- 动态文本容器：行高与链接容器保持视觉一致 -->
+     <div id="DYhd1" class="DYhdColor" style="display: inline-block; vertical-align: baseline; font-size: 16px; line-height: 19px; margin-left: 10px;"></div>
+
           <script>renderGlobalText("DYhd1");</script> 
 
 
